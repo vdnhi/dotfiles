@@ -113,3 +113,6 @@ let g:ycm_use_clangd=0
 :command! -complete=file -nargs=1 Rpdf :r !pdftotext -nopgbrk <q-args> -
 :command! -complete=file -nargs=1 Rpdf :r !pdftotext -nopgbrk <q-args> - |fmt -csw78
 :nnoremap <C-t> :terminal<CR>
+
+" Format JSOn
+com! FormatJSON %!python3 -m json.tool

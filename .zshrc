@@ -100,8 +100,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source /Users/nhivd/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-
-
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 export TCFRAME_HOME=~/tcframe
@@ -124,3 +122,4 @@ export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 alias my_server="ssh vdn1999bxvp@35.220.237.143"
 export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
+export TERM=xterm-256color
