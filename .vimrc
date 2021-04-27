@@ -52,6 +52,8 @@ Plugin 'zxqfl/tabnine-vim'
 Plugin 'dracula/vim',{'name':'dracula'}
 
 Plugin 'fatih/vim-go'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -69,7 +71,6 @@ filetype plugin indent on    " required
 "
 """"""""""""""""" vuducnhi-vimrc """"""""""""""""
 syntax enable
-colorscheme monokai
 set hidden
 set backspace=2
 set autoindent
@@ -82,12 +83,11 @@ set hlsearch		" highlight search result
 set noswapfile
 
 " y and d put stuff into system clipboard (so that other apps can see it)
-set clipboard=unnamed,unnamedplus
+set clipboard=unnamedplus
 set wrap
 set textwidth=80
 set cindent
 set timeoutlen=100
-set cursorline
 
 " tab related stuffs
 set shiftwidth=2 	" tabsize = 2
@@ -104,7 +104,13 @@ set smartcase 		" use case sensitive if i use uppercase
 set splitbelow
 set splitright
 
-" You Complete Me
+" Cursor setting
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_SR = "\<Esc>]50;CursorShape=2\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+
+
+"" You Complete Me
 let g:ycm_key_list_select_completion=[]
 let g:ycm_key_list_previous_completion=[]
 let g:ycm_max_diagnostics_to_display=0
@@ -114,5 +120,8 @@ let g:ycm_use_clangd=0
 :command! -complete=file -nargs=1 Rpdf :r !pdftotext -nopgbrk <q-args> - |fmt -csw78
 :nnoremap <C-t> :terminal<CR>
 
-" Format JSOn
+" Format json
 com! FormatJSON %!python3 -m json.tool
+
+let g:airline_theme='simple'
+
