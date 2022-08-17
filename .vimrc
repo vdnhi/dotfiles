@@ -29,21 +29,11 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " added nerdtree
 Plugin 'scrooloose/nerdtree'
 
-" added vim-scala for scala syntax
-Plugin 'derekwyatt/vim-scala'
-
 " added MatchTagAlways to highlight html/xml tag
 Plugin 'Valloric/MatchTagAlways'
 
 " added auto-pairs
 Plugin 'jiangmiao/auto-pairs'
-
-" added YAJS 
-Plugin 'othree/yajs.vim'
-
-" added Vim-jsx
-Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
 
 Plugin 'dracula/vim',{'name':'dracula'}
 
